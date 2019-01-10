@@ -8,6 +8,10 @@ int WavePositionX2 = -860;
 int WavePositionX3 = 0;
 int WavePositionX4 = -860;
 
+int WavePositionY1 = 240;
+int WavePositionY2 = 240;
+int WavePositionY3 = 240;
+int WavePositionY4 = 240;
 
 void setup(){
   
@@ -27,15 +31,27 @@ void draw(){
   fill(0);
   rect(0, 0, 640, 480);
   
-   image(nami_4, WavePositionX4, 0);
-  image(nami_3, WavePositionX3, 0);
-  image(nami_2, WavePositionX2, 0);
-  image(img, WavePositionX1, 0);
+  image(nami_4, WavePositionX4, WavePositionY1);
+  image(nami_3, WavePositionX3, WavePositionY2);
+  image(nami_2, WavePositionX2, WavePositionY3);
+  image(img, WavePositionX1, WavePositionY4);
   
   WavePositionX1 -= 10;
   WavePositionX2 += 10;
   WavePositionX3 -= 10;
   WavePositionX4 += 10;
+  
+  WavePositionY1 -= 5;
+  WavePositionY2 -= 5;
+  WavePositionY3 -= 5;
+  WavePositionY4 -= 5;
+  
+  if(WavePositionY1 < 0){
+  WavePositionY1 = 0;
+  WavePositionY2 = 0;
+  WavePositionY3 = 0;
+  WavePositionY4 = 0;
+  }
   
     if(WavePositionX1 < -840){
     WavePositionX1 = 0;
