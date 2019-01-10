@@ -23,7 +23,7 @@ void setup(){
   size(640, 480);
   colorMode(RGB, 255);
   background(0, 0, 0);  
-  frameRate(10);
+  frameRate(60);
 }
 
 void draw(){
@@ -36,15 +36,15 @@ void draw(){
   image(nami_2, WavePositionX2, WavePositionY3);
   image(img, WavePositionX1, WavePositionY4);
   
-  WavePositionX1 -= 10;
-  WavePositionX2 += 10;
-  WavePositionX3 -= 10;
-  WavePositionX4 += 10;
+  WavePositionX1 -= 2;
+  WavePositionX2 += 2;
+  WavePositionX3 -= 2;
+  WavePositionX4 += 2;
   
-  WavePositionY1 -= 5;
-  WavePositionY2 -= 5;
-  WavePositionY3 -= 5;
-  WavePositionY4 -= 5;
+  WavePositionY1 -= 1;
+  WavePositionY2 -= 1;
+  WavePositionY3 -= 1;
+  WavePositionY4 -= 1;
   
   if(WavePositionY1 < 0){
   WavePositionY1 = 0;
