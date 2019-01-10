@@ -3,10 +3,10 @@ PImage nami_2;
 PImage nami_3;
 PImage nami_4;
 
-int x1 = 0;
-int x2 = -860;
-int x3 = 0;
-int x4 = -860;
+int WavePositionX1 = 0;
+int WavePositionX2 = -860;
+int WavePositionX3 = 0;
+int WavePositionX4 = -860;
 
 
 void setup(){
@@ -27,27 +27,27 @@ void draw(){
   fill(0);
   rect(0, 0, 640, 480);
   
-   image(nami_4, x4, 0);
-  image(nami_3, x3, 0);
-  image(nami_2, x2, 0);
-  image(img, x1, 0);
+   image(nami_4, WavePositionX4, 0);
+  image(nami_3, WavePositionX3, 0);
+  image(nami_2, WavePositionX2, 0);
+  image(img, WavePositionX1, 0);
   
-  x1 -= 10;
-  x2 += 10;
-  x3 -= 10;
-  x4 += 10;
+  WavePositionX1 -= 10;
+  WavePositionX2 += 10;
+  WavePositionX3 -= 10;
+  WavePositionX4 += 10;
   
-    if(x1 < -840){
-    x1 = 0;
+    if(WavePositionX1 < -840){
+    WavePositionX1 = 0;
   }
-  if(x3 < -840){
-   x3 = 0; 
+  if(WavePositionX3 < -840){
+   WavePositionX3 = 0; 
   }
-  if(x2 > 0){
-   x2 = -805; 
+  if(WavePositionX2 > 0){
+   WavePositionX2 = -805; 
   }
-  if(x4 > 0){
-   x4 = -805; 
+  if(WavePositionX4 > 0){
+   WavePositionX4 = -805; 
   }
   
   
